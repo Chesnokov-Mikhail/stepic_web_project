@@ -1,4 +1,9 @@
-import multiprocessing
-bind = "0.0.0.0:8080"
-pythonpath = '/home/box/web'
-workers = multiprocessing.cpu_count() * 2 + 1
+CONFIG = {
+'working_dir': '/home/box/web/',
+'args': (
+'--bind=0.0.0.0:8080',
+'--workers=2',
+'--timeout=60',
+'hello:app',
+),
+}
